@@ -1,12 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
+import { createRoot } from 'react-dom/client';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+import 'bulma/css/bulma.css';
+import './styles/index.scss';
+
+import { App } from './App';
+import { AuthProvider } from './components/Auth/AuthContext';
+
+const Root = () => (
+  <AuthProvider>
+    <App />
+  </AuthProvider>
 );
-root.render(
-    <React.StrictMode>
-        <App />
-    </React.StrictMode>
-);
+
+createRoot(document.getElementById('root') as HTMLDivElement)
+  .render(<Root />);
