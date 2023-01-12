@@ -1,11 +1,16 @@
-# Currency Converter
+# To-do list on React
 
-Application can convert currencies such as UAH, EUR, USD.
+A to-do list management application.
+
+## Features:
+- Adding, removing or renaming items
+- Filter by completed or active states
+- Mark all items as completed, clear them by one click
 
 ![](https://s9.gifyu.com/images/2023-01-12-14-21-45.gif)
 > [DEMO LINK](https://denis-khristyuk.github.io/todos-list)
 
 ## Technologies used:
-- React with Typescript
-- CSS library: Material UI
-- Used API - [Currency converter by API Ninjas](https://rapidapi.com/apininjas/api/currency-converter-by-api-ninjas/)
+- React 
+- Typescript
+- CSS library: Bulma
