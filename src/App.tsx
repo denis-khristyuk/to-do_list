@@ -132,17 +132,19 @@ export const App: React.FC = () => {
 
   const handleSubmitAdd = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (user) {
-      postTodo({
-        title: inputValue,
-        completed: false,
-        userId: user.id,
-      })
-        .then(() => updateTodos())
-        .catch(() => {
-          setErrorMessages([...errorMessages, 'Unable to add a todo']);
+    if (inputValue.trim()) {
+      if (user) {
+        postTodo({
+          title: inputValue,
+          completed: false,
+          userId: user.id,
         })
-        .finally(() => setInputValue(''));
+            .then(() => updateTodos())
+            .catch(() => {
+              setErrorMessages([...errorMessages, 'Unable to add a todo']);
+            })
+            .finally(() => setInputValue(''));
+      }
     }
   };
 
